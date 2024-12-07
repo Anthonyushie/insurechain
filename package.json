@@ -12,6 +12,7 @@
   "dependencies": {
     "@burnt-labs/abstraxion": "^1.0.0-alpha.54",
     "@burnt-labs/ui": "^0.1.0-alpha.15",
+    "@rollup/plugin-inject": "^5.0.5",
     "axios": "^1.7.9",
     "buffer": "^6.0.3",
     "react": "^18.3.1",
