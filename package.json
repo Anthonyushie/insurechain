@@ -3,9 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm install @rollup/rollup-linux-x64-gnu && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -13,6 +16,8 @@
     "@burnt-labs/abstraxion": "^1.0.0-alpha.54",
     "@burnt-labs/ui": "^0.1.0-alpha.15",
     "@rollup/plugin-inject": "^5.0.5",
+    "@rollup/rollup-linux-arm64-gnu": "^4.28.1",
+    "@rollup/rollup-linux-x64-gnu": "^4.28.1",
     "axios": "^1.7.9",
     "buffer": "^6.0.3",
     "react": "^18.3.1",
