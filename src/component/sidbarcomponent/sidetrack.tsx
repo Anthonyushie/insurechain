@@ -74,7 +74,7 @@ const Sidebar: React.FC = () => {
         <nav className="menu">
           <h1 className="menu-header">Menu</h1>
 
-          <div className="menu-item nav-active" data-tooltip="Home">
+          <div className="menu-item nav-active" >
             <Link to="/home/profile">
               {" "}
              
@@ -84,7 +84,7 @@ const Sidebar: React.FC = () => {
             
             </Link>
           </div>
-          <div className="menu-item" data-tooltip="Wallets">
+          <div className="menu-item" >
             <Link to="/home/claim">
            
                 <FaWallet />
@@ -101,7 +101,7 @@ const Sidebar: React.FC = () => {
         </nav>
 
         {/* logout */}
-        <div className="logout" data-tooltip="Logout">
+        <div className="logout">
           <Link to="/">
             <i>
               <IoLogOut />

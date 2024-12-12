@@ -1,161 +1,177 @@
+/* Sidebar styling */
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: -50%;
-  height: 100vh;
-  width: var(--sidebar-width-active);
-  color: rgb(253, 244, 244);
-  background: linear-gradient(to bottom, #4e4e4e, #232323e2);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.5s ease;
-  z-index: 1000;
-  padding: 0 20px;
-  border: 0.2px solid rgba(0, 0, 0, 0.372);
+  position: fixed; /* Keeps the sidebar in a fixed position */
+  top: 0; /* Aligns the sidebar to the top of the viewport */
+  left: -50%; /* Initially hides the sidebar off-screen */
+  height: 100vh; /* Makes the sidebar span the entire viewport height */
+  width: var(--sidebar-width-active); /* Uses a CSS variable for width */
+  color: rgb(253, 244, 244); /* Sets text color */
+  background: linear-gradient(to bottom, #4e4e4e, #232323e2); /* Adds a gradient background */
+  display: flex; /* Flexbox layout for child alignment */
+  flex-direction: column; /* Arranges items in a column */
+  align-items: center; /* Centers items horizontally */
+  justify-content: space-between; /* Distributes items with space between */
+  transition: all 0.5s ease; /* Smooth transition for property changes */
+  z-index: 1000; /* Ensures the sidebar stays above other elements */
+  padding: 0 20px; /* Adds horizontal padding */
+  border: 0.2px solid rgba(0, 0, 0, 0.372); /* Light border for the sidebar */
 }
 
+/* Sidebar logo styling */
 .sidebarlogo {
-  width: 50px;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.372);
+  width: 50px; /* Sets a fixed width for the logo */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 15px; /* Rounds the corners of the logo */
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.372); /* Adds a shadow effect */
 }
 
-
+/* Active state for sidebar */
 .sidebar.active {
-  left: 0;
+  left: 0; /* Makes the sidebar visible by moving it into view */
 }
 
+/* General layout for items in the sidebar */
 .logo,
 .menu-item,
 .logout {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  transition: justify-content 0.5s ease;
+  align-items: center; /* Aligns items vertically */
+  justify-content: flex-start; /* Aligns items to the start horizontally */
+  transition: justify-content 0.5s ease; /* Smooth transition for alignment changes */
 }
 
+/* Logo specific styling */
 .logo {
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 30px; /* Adds space above the logo */
+  width: 100%; /* Ensures the logo spans the available width */
 }
 
+/* Icon styling within items */
 .logo i,
 .menu-item i,
 .logout i {
-  font-size: 1.5em;
-  margin-right: 5px;
+  font-size: 1.5rem; /* Sets icon size */
+  margin-right: 5px; /* Adds space between the icon and text */
 }
 
+/* Text styling within items */
 .logo span,
 .menu-item span,
 .logout span {
-  margin-left: 4px;
-  display: block;
-  transition: 0.5s ease;
-  color: white;
+  margin-left: 4px; /* Adds space to the left of the text */
+  display: block; /* Ensures the text is block-level */
+  transition: 0.5s ease; /* Smooth transition for visibility */
+  color: white; /* Sets text color */
 }
 
+/* Menu container styling */
 .menu {
-  flex-grow: 1;
+  flex-grow: 1; /* Allows the menu to take up available space */
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
+  flex-direction: column; /* Arranges menu items vertically */
+  gap: 0.5rem; /* Adds space between menu items */
+  width: 100%; /* Makes the menu span the full width */
 }
 
+/* Menu header styling */
 .menu-header {
-  color: white;
-  text-transform: uppercase;
-  text-align: left;
-  font-size: 20px;
-  transition: 0.5s ease;
-  width: 100%;
-}
-
-.menu-item {
   cursor: pointer;
-  padding: 5px 5px;
-  border-radius: 15px;
-  color: white;
-  
-  transition: all 0.5s ease;
-  width: 100%;
-}
-.menu-item a {
-  display: flex;
-  gap: 5px;
-  text-decoration: none;
-  color: white;
+  color: white; /* Sets text color */
+  text-transform: uppercase; /* Capitalizes all letters */
+  text-align: left; /* Aligns text to the left */
+  font-size: 20px; /* Sets font size */
+  transition: 0.5s ease; /* Smooth transition for changes */
+  width: 100%; /* Spans the full width */
 }
 
+/* Individual menu item styling */
+.menu-item {
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  padding: 5px 5px; /* Adds padding around items */
+  border-radius: 15px; /* Rounds item corners */
+  color: white; /* Sets text color */
+  transition: all 0.5s ease; /* Smooth transition for hover effects */
+  width: 100%; /* Ensures full width */
+}
+
+/* Link styling within menu items */
+.menu-item a {
+  font-size: 25px;
+  display: flex; /* Flexbox for alignment */
+  gap: 5px; /* Adds space between link elements */
+  text-decoration: none; /* Removes underline from links */
+  color: white; /* Sets link color */
+}
+
+/* Hover and active state for menu items */
 .menu-item:hover,
+.menu-header:hover
 .nav-active,
 .logout:hover {
-
-  background: #79797979;
-  color: white;
+  background: #79797979; /* Changes background color on hover */
+  color: white; /* Maintains white text color */
 }
 
+/* Logout button styling */
 .logout {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   transition: justify-content 0.5s ease;
-  padding: 10px 20px;
-  margin-bottom: 10vh;
-  border-radius: 3px;
-  cursor: pointer;
-  width: 100%;
+  padding: 10px 20px; /* Adds padding */
+  margin-bottom: 10vh; /* Adds space at the bottom */
+  border-radius: 3px; /* Slight rounding of corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  width: 100%; /* Ensures full width */
 }
+
+/* Link styling within logout button */
 .logout a {
-  text-decoration: none;
-  color: white;
+  text-decoration: none; /* Removes underline */
+  color: white; /* Sets link color */
 }
 
+/* Top navigation bar (hidden by default) */
 .topnav {
-  display: none;
+  display: none; /* Initially hidden */
 }
 
-/* Mobile toggle button */
+/* Mobile toggle button styling */
 .mobile-toggle {
-  display: flex;
+  display: flex; /* Shows toggle button on mobile */
   justify-content: start;
   position: fixed;
   top: 12px;
   right: 20px;
-  z-index: 1000;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
+  z-index: 1000; /* Ensures visibility over other elements */
+  border: none; /* Removes border */
+  cursor: pointer; /* Changes cursor on hover */
+  font-size: 24px; /* Sets button size */
 }
 
 .mobile-toggle button {
-  background: none;
-  border: none;
-
+  background: none; /* Removes background */
+  border: none; /* Removes border */
 }
 
 .mobile-toggle i {
-  color: #ffffff;
-
+  color: #ffffff; /* Sets icon color */
 }
 
-/* Overlay */
+/* Overlay for sidebar */
 .sidebar-overlay {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
+  width: 100%; /* Covers the entire screen */
+  height: 100%; /* Covers the entire screen */
+  z-index: 999; /* Below sidebar */
 }
 
+/* Active state for overlay */
 .sidebar-overlay.active {
-  display: block;
+  display: block; /* Makes overlay visible */
 }
 
 /* Responsive adjustments */
@@ -167,7 +183,6 @@
     height: 100vh;
     width: var(--sidebar-width-active);
     color: rgb(27, 27, 27);
-   
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -180,11 +195,11 @@
   }
 
   .mobile-toggle {
-    display: none;
+    display: none; /* Hides mobile toggle on larger screens */
   }
 
   .sidebar {
-    position: sticky;
+    position: sticky; /* Keeps sidebar in place while scrolling */
     left: 0;
     width: var(--sidebar-width);
   }
@@ -193,16 +208,17 @@
     width: var(--sidebar-width-active);
   }
 
+  /* Adjustments for inactive sidebar */
   .sidebar:not(.active) .logo span,
   .sidebar:not(.active) .menu-item span,
   .sidebar:not(.active) .logout span {
-    display: none;
+    display: none; /* Hides text for compact sidebar */
   }
 
   .sidebar:not(.active) .logo,
   .sidebar:not(.active) .menu-item,
   .sidebar:not(.active) .logout {
-    justify-content: center;
+    justify-content: center; /* Centers icons in compact mode */
   }
 
   .sidebar:not(.active) .menu-header {
